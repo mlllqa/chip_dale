@@ -1,0 +1,80 @@
+@use "../mixins";
+@use "../variables";
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 190rem;
+}
+
+.contacts__title {
+  font-size: 50rem;
+  margin-bottom: 52rem;
+}
+
+.contacts__txt {
+  width: 525rem;
+  margin-bottom: 155rem;
+}
+
+.contacts__btns {
+  display: flex;
+  gap: 40rem;
+  margin-top: 72rem;
+  margin-bottom: 69rem;
+}
+
+.contacts__btn {
+  @include mixins.subtitle;
+  padding: 20rem 40rem;
+  border: 0;
+  border-radius: 20rem;
+}
+
+.contacts__btn-number {
+  background-color: variables.$orange;
+}
+
+.contacts__btn-service {
+  color: variables.$orange;
+}
+
+.contacts__map {
+  width: 682rem;
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    margin-top: 300rem;
+    flex-direction: column-reverse;
+    gap: 200rem;
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__title {
+    @include mixins.subtitle;
+    width: 100%;
+    margin-bottom: 140rem;
+  }
+
+  .contacts__txt {
+    margin-bottom: 200rem;
+    width: 100%;
+  }
+
+  .contacts__btns {
+    width: 90%;
+  }
+
+  .contacts__btn {
+    padding: 20rem 105rem;
+  }
+
+  .contacts__icons-contacts{
+    display: flex;
+  }
+}

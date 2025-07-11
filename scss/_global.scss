@@ -1,0 +1,49 @@
+@use "variables";
+@use "mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+  font-family: "Banger";
+  src: url("../fonts/bangerscyrillic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham_bookitalic.otf") format("opentype");
+}
+
+html{
+    font-size: calc(1vw / 19.2);
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: variables.$blue;
+    overflow-x: hidden;
+}
+
+.container{
+    margin: 0 120rem;
+}
+
+.header, .hero{
+    margin: 0 68rem;
+}
+
+
+.title{
+    @include mixins.title;
+}
+
+.txt{
+    @include mixins.txt;
+}
+
+.subtitle{
+    @include mixins.subtitle;
+}

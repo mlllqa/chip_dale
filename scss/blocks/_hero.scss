@@ -1,0 +1,83 @@
+@use "../mixins";
+@use "../variables";
+
+.hero {
+  box-sizing: border-box;
+  height: 785rem;
+  padding: 100rem 52rem;
+  background-image: url("../img/heroBG.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.hero__title {
+  color: variables.$blue;
+  text-shadow: -5rem -5rem 0 variables.$light-blue;
+  width: 750rem;
+  margin-bottom: 36rem;
+}
+
+.hero__txt {
+  width: 753rem;
+  margin-bottom: 159rem;
+  color: variables.$grey;
+}
+
+.hero__btn {
+  background-color: variables.$orange;
+  border: none;
+  padding: 20rem 150rem;
+  border-radius: 20rem;
+  box-shadow: -5rem -5rem 0 variables.$light-orange;
+}
+
+.hero__btn-link {
+  @include mixins.subtitle;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 86vh;
+    border-radius: 20rem;
+    padding: 80rem 80rem;
+    background-image: url("../img/heroMobile.svg");
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40rem;
+  }
+
+  .hero__title {
+    font-size: 170rem;
+    width: auto;
+  }
+
+  .hero__txt {
+    width: auto;
+    font-size: 60rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: variables.$grey;
+    margin-top: 150rem;
+  }
+
+  .hero__btn {
+    width: 70%;
+    margin-top: 100rem;
+    align-self: start;
+    padding: 30rem 00rem;
+    border-radius: 16rem;
+    box-shadow: -3rem -3rem 0 variables.$light-orange;
+  }
+
+  .hero__btn-link {
+    @include mixins.subtitle;
+    font-size: 70rem;
+    display: block;
+  }
+}

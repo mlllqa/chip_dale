@@ -1,0 +1,131 @@
+@use "../mixins";
+@use "../variables";
+
+.comfort{
+    margin-top: 190rem;
+}
+
+.comfort__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comfort__header-block-subtitle{
+    width: 502rem;
+    font-size: 50rem;
+    margin-bottom: 52rem;
+}
+
+.comfort__header-block-txt{
+    width: 525rem;
+}
+
+.comfort__header-item{
+    width: 542rem;
+}
+
+.price__arrow{
+    width: 29rem;
+}
+
+.comfort__price{
+    margin-top: 110rem;
+    display: flex;
+    flex-direction: column;
+    gap: 52rem;
+}
+
+.price__summary{
+    box-sizing: border-box;
+    padding: 35rem 29rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20rem;
+    background-color: variables.$white;
+}
+
+.price__arrow {
+  transition: transform 0.3s ease;
+}
+
+details[open] > summary .price__arrow {
+  transform: rotate(-180deg);
+}
+
+.price__title{
+    color: variables.$orange;
+}
+
+.price__name{
+    max-width: 70%;
+}
+
+.price__title-second{
+    color: variables.$blue;
+}
+
+.price__item{
+    margin-top: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 29rem;
+}
+
+.price__line{
+    border: 0;
+    background-color: variables.$white;
+    height: 4rem;
+    margin-top: 37rem;
+    border-radius: 15rem;
+}
+
+.running-line__wrapper-second{
+    margin-top: 300rem;
+}
+
+@media (max-width: 600px) {
+    .comfort{
+        margin-top: 250rem;
+    }
+
+    .comfort__header-item{
+        display: none;
+    }
+
+    .comfort__header-block{
+        width: 100%;
+    }
+
+    .comfort__header-block-subtitle{
+        width: 100%;
+        margin-bottom: 140rem;
+        @include mixins.subtitle;
+    }
+
+    .comfort__header-block-txt{
+        width: 100%;
+        margin-bottom: 120rem;
+        @include mixins.txt;
+    }
+
+    .price__name{
+        max-width: 1150rem;
+    }
+
+    .price__arrow{
+        width: 60rem;
+    }
+
+    .price__summary{
+        padding: 50rem 50rem ;
+    }
+
+    .price__line{
+        height: 7rem;
+    }
+
+ 
+}

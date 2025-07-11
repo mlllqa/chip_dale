@@ -1,0 +1,33 @@
+@use "variables";
+
+@mixin subtitle {
+  font-family: "Geologica", sans-serif;
+  font-size: 26.25rem;
+  color: variables.$white;
+
+  @media (max-width: 600px) {
+    font-size: 70rem;
+  }
+}
+
+@mixin title {
+  font-family: "Banger";
+  font-size: 75rem;
+  color: variables.$white;
+  line-height: 110%;
+
+  @media (max-width: 600px) {
+    font-size: 170rem;
+  }
+}
+
+@mixin txt {
+  font-family: "Gotham";
+  font-size: 22.5rem;
+  color: variables.$white;
+
+  @media (max-width: 600px) {
+    font-size: 60rem;
+    line-height: 90rem;
+  }
+}

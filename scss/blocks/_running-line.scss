@@ -1,0 +1,40 @@
+@use "../mixins";
+@use "../variables";
+
+.running-line__wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 210rem;
+}
+
+.running-line__block {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+  animation: runLine 10s linear infinite;
+}
+
+.running-line {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 500rem; // твой нужный разрыв
+  max-width: none;
+  @include mixins.title;
+  letter-spacing: 6rem;
+}
+
+@keyframes runLine {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .running-line__wrapper {
+    margin-top: 300rem;
+  }
+}

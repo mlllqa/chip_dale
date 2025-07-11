@@ -1,0 +1,146 @@
+@use "../mixins";
+@use "../variables";
+
+.header {
+  padding: 25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__row-left {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 131rem;
+  margin-right: 155rem;
+}
+
+.header__row-list {
+  display: flex;
+  gap: 33rem;
+}
+
+.header__row-list-item-link {
+  @include mixins.subtitle;
+}
+
+.header__row-right-list {
+  display: flex;
+  gap: 33rem;
+}
+
+.header__row-right-list-icon {
+  width: 45rem;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 90rem;
+
+  span {
+    height: 4rem;
+    background-color: variables.$white;
+    border-radius: 20rem;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40rem 0;
+  }
+
+  .header__logo {
+    width: 250rem;
+    margin: 0;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .header__row-list,
+  .header__row-right-list {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background-color: variables.$blue; // полупрозрачный тёмный фон
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mobile-menu__nav,
+  .mobile-menu__socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu__nav li {
+    margin-bottom: 80rem;
+  }
+
+  .mobile-menu__nav a {
+    color: white;
+    text-decoration: none;
+    @include mixins.subtitle;
+    font-weight: bold;
+  }
+
+  .mobile-menu__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 100rem;
+  }
+
+  .mobile-menu__socials img {
+    width: 100rem;
+    height: 100rem;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  .hero {
+    transition: filter 0.3s ease;
+  }
+
+  .hero.blurred {
+    filter: blur(6px);
+  }
+
+  .mobile-menu__close{
+    background: transparent;
+    border: none;
+
+    img{
+      width: 100rem;
+      margin-bottom: 80rem;
+    }
+  }
+}
