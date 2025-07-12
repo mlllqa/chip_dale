@@ -972,10 +972,6 @@ details[open] > summary .price__arrow {
   border-radius: 15rem;
 }
 
-.running-line__wrapper-second {
-  margin-top: 300rem;
-}
-
 @media (max-width: 600px) {
   .comfort {
     margin-top: 250rem;

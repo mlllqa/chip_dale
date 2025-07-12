@@ -18,7 +18,7 @@
 .running-line {
   display: inline-block;
   white-space: nowrap;
-  padding-right: 500rem; // твой нужный разрыв
+  padding-right: 500rem; 
   max-width: none;
   @include mixins.title;
   letter-spacing: 6rem;
