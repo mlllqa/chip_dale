@@ -299,6 +299,11 @@ body {
     font-size: 70rem;
   }
 }
+@media (max-width: 600px) {
+  .contacts__number-second {
+    margin-bottom: 200rem;
+  }
+}
 .aboutUs {
   margin-top: 190rem;
   display: flex;

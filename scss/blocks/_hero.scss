@@ -44,7 +44,6 @@
     background-size: cover;
     background-position: left top;
     background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,6 +79,10 @@
     @include mixins.subtitle;
     font-size: 70rem;
     display: block;
+  }
+
+  .contacts__number-second{
+    margin-bottom: 200rem;
   }
 }
 
