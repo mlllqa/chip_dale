@@ -436,13 +436,13 @@ body {
     gap: 68rem;
   }
   .aboutUs__column-right-cards {
-    gap: 68rem;
+    justify-content: space-between;
   }
   .aboutUs__column-right-cards-item {
     box-sizing: border-box;
     border-radius: 20rem;
     box-shadow: -5rem -5rem 0 #C6D9E4;
-    padding: 31rem;
+    padding: 20rem;
   }
   .aboutUs__column-right-cards-item-icon {
     width: 150rem;
@@ -1044,6 +1044,10 @@ details[open] > summary .price__arrow {
   gap: 40rem;
   margin-top: 72rem;
   margin-bottom: 69rem;
+}
+
+.contacts__number-first {
+  margin-bottom: 30rem;
 }
 
 .contacts__btn {

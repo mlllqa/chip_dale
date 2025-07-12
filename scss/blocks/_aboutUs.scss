@@ -129,14 +129,14 @@
   }
 
   .aboutUs__column-right-cards {
-    gap: 68rem;
+    justify-content: space-between;
   }
 
   .aboutUs__column-right-cards-item {
     box-sizing: border-box;
     border-radius: 20rem;
     box-shadow: -5rem -5rem 0 variables.$light-blue;
-    padding: 31rem;
+    padding: 20rem;
   }
 
   .aboutUs__column-right-cards-item-icon {

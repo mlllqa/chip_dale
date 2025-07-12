@@ -1,18 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- КОПИРОВАНИЕ НОМЕРА ---
-  const phoneNumber = document
-    .querySelector(".contacts__number")
-    ?.textContent?.trim();
+  const numbers = document.querySelectorAll(".contacts__number");
   const copyBtn = document.querySelector(".contacts__btn-number");
 
+  let currentIndex = 0;
+
   copyBtn?.addEventListener("click", () => {
-    if (!phoneNumber) return;
-    navigator.clipboard.writeText(phoneNumber).then(() => {
-      copyBtn.textContent = "Скопировано!";
+    if (!numbers.length) return;
+
+    const number = numbers[currentIndex]?.textContent?.trim();
+    if (!number) return;
+
+    navigator.clipboard.writeText(number).then(() => {
+      copyBtn.innerHTML = `Скопировано:<br>${number}`;
+
       setTimeout(() => {
         copyBtn.textContent = "Скопировать номер";
       }, 2000);
     });
+
+    // Переключение между 0 и 1
+    currentIndex = (currentIndex + 1) % numbers.length;
   });
 
   // --- КНОПКИ ПРОКРУТКИ К БЛОКУ УСЛУГ ---
